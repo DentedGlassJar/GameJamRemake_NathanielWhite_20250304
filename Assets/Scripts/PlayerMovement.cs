@@ -2,8 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.LowLevel;
 using static InputManager;
 
 public class PlayerMovement : MonoBehaviour
@@ -11,7 +9,9 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D playerRigidbody;
 
     public Vector2 moveDirection;
-    private float moveSpeed = 5.0f;
+    private float moveSpeed = 2.5f;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void HandlePlayerMovement()
-    {
+    { 
         playerRigidbody.MovePosition(playerRigidbody.position + moveDirection * moveSpeed * Time.fixedDeltaTime);
     }
 
