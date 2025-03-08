@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public AudioSource themeMusic;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        themeMusic.Play();
+        DontDestroyOnLoad(themeMusic);
     }
 }

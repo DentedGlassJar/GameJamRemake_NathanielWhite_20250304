@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector2 moveDirection;
     private float moveSpeed = 2.5f;
+    private bool hasDashed;
+    private float DashCooldown = 5f;
 
 
 
@@ -34,8 +36,32 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void HandlePlayerMovement()
-    { 
+    {
         playerRigidbody.MovePosition(playerRigidbody.position + moveDirection * moveSpeed * Time.fixedDeltaTime);
+
+        if (Input.GetKeyDown(KeyCode.RightShift) && Input.GetKeyDown(KeyCode.S) && hasDashed == false)
+        {
+            gameObject.transform.Translate(0f, -2f, 0);
+            hasDashed = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightShift) && Input.GetKeyDown(KeyCode.W) && hasDashed == false)
+        {
+            gameObject.transform.Translate(0f, 2f, 0);
+            hasDashed = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightShift) && Input.GetKeyDown(KeyCode.D) && hasDashed == false)
+        {
+            gameObject.transform.Translate(2f, 0f, 0);
+            hasDashed = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightShift) && Input.GetKeyDown(KeyCode.A) && hasDashed == false)
+        {
+            gameObject.transform.Translate(-2f, 0f, 0);
+            hasDashed = true;
+        }
     }
 
     // if the MoveEvent is enabled, it updates the moveVector value with the inputVector value
@@ -43,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
     {
         moveDirection = inputVector;
     }
+
 
     private void FixedUpdate()
     {
@@ -52,5 +79,18 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         playerWalkFloat.SetFloat("X", moveDirection.x);
+
+        if (hasDashed == true)
+        {
+            Debug.Log("PLayer is on cooldown!");
+            DashCooldown = DashCooldown - 0.05f;
+
+            if (DashCooldown <= 0)
+            {
+                DashCooldown = 5f;
+                Debug.Log("Player is able to dash again");
+                hasDashed = false;
+            }
+        }
     }
 }

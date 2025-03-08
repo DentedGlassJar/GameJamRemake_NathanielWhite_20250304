@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    Vector3 spawnPoint; 
+    Vector3 spawnPoint;
+    public AudioSource catHurt;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
         if (collision.gameObject.CompareTag("Buzzsaw"))
         {
             Debug.Log("Player has been moved back!");
+            catHurt.Play();
             gameObject.transform.position = spawnPoint;     
         }
     }
