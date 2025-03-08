@@ -44,4 +44,9 @@ public class PlayerMovement : MonoBehaviour
     {
         HandlePlayerMovement();
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+    }
 }
