@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D playerRigidbody;
 
+    private Animator playerWalkFloat;
+
     public Vector2 moveDirection;
     private float moveSpeed = 2.5f;
 
@@ -17,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         playerRigidbody = this.GetComponent<Rigidbody2D>();
+
+        playerWalkFloat = this.GetComponent<Animator>();
     }
 
     private void OnEnable()
@@ -45,8 +49,8 @@ public class PlayerMovement : MonoBehaviour
         HandlePlayerMovement();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Update()
     {
-        
+        playerWalkFloat.SetFloat("X", moveDirection.x);
     }
 }
