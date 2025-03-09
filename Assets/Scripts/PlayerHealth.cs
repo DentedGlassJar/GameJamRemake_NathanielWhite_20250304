@@ -30,7 +30,9 @@ public class PlayerHealth : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Finish"))
         {
-            SceneManager.LoadScene(sceneIndex++);
+            
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            Debug.Log($"Scene is now {sceneIndex}");
         }
     }
 }

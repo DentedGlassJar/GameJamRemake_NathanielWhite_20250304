@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 316730824100757285}
   - component: {fileID: 3203607837664742918}
   m_Layer: 0
-  m_Name: BuzzsawSprite
+  m_Name: Sprite
   m_TagString: Buzzsaw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -103,7 +103,7 @@ Animator:
   m_GameObject: {fileID: 3844834396121446515}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1b46a587d2bc9844eb590eb226bb4066, type: 2}
+  m_Controller: {fileID: 9100000, guid: 985346c8fd3352f4fbbd5c2c70180d4f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -126,6 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 867f18629980fc149b3195a1e36dc14c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wayPoints: []
+  moveSpeed: 0
 --- !u!1 &7914912858804474406
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,9 +138,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3756256521652850394}
   - component: {fileID: 8937188735254236937}
-  - component: {fileID: 2079359416431110400}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -211,24 +212,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &2079359416431110400
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7914912858804474406}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1b46a587d2bc9844eb590eb226bb4066, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
