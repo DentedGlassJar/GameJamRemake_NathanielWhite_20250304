@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator playerWalkFloat;
 
     public Vector2 moveDirection;
-    private float moveSpeed = 2.5f;
+    private float moveSpeed = 4f;
     private bool hasDashed;
     private float DashCooldown = 5f;
 

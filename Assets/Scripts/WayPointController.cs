@@ -28,7 +28,7 @@ public class WayPointController : MonoBehaviour
 
     void Move()
     {
-        transform.position = Vector2.MoveTowards(transform.position, wayPoints[waypointIndex].transform.position, moveSpeed);
+        transform.position = Vector2.MoveTowards(transform.position, wayPoints[waypointIndex].transform.position, moveSpeed * Time.deltaTime);
 
         if (transform.position == wayPoints[waypointIndex].transform.position)
         {

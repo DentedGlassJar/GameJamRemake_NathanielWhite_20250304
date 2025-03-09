@@ -27,7 +27,7 @@ AnimationClip:
     - time: 0.1
       value: {fileID: -969908765, guid: 6ca8415939ce71242a6b26c820815f77, type: 3}
     attribute: m_Sprite
-    path: BuzzsawSprite
+    path: Square
     classID: 212
     script: {fileID: 0}
     flags: 2
@@ -39,7 +39,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 3967357243
+      path: 3394203039
       attribute: 0
       script: {fileID: 0}
       typeID: 212
